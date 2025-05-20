@@ -1,0 +1,87 @@
+/* Branding (Customize these variables) */
+:root {
+    --primary-color: #007bff; /* Blue */
+    --primary-hover-color: #0056b3;
+    --secondary-color: #e9ecef; /* Light Gray */
+    --text-color: #212529; /* Dark Gray */
+    --heading-color: #0c3057;
+    --border-radius: 5px;
+    --font-family: sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    margin: 20px;
+    color: var(--text-color);
+}
+.section {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+    background-color: var(--secondary-color);
+}
+.section h2 {
+    margin-top: 0;
+    color: var(--heading-color);
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="file"],
+select,
+textarea {
+    width: calc(100% - 12px);
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    box-sizing: border-box;
+    font-family: var(--font-family);
+}
+button[type="submit"] {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 16px;
+}
+button[type="submit"]:hover {
+    background-color: var(--primary-hover-color);
+}
+.director-details {
+    border: 1px dashed #aaa;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: var(--border-radius);
+    background-color: #fff;
+}
+.director-details h3 {
+    margin-top: 0;
+    color: var(--heading-color);
+}
+.hidden {
+    display: none;
+}
+.required-doc {
+    font-style: italic;
+    color: green;
+}
+.important-note {
+    color: red;
+    font-weight: bold;
+    margin-top: 10px;
+}
+/* Style for error messages */
+.error-message {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 5px;
+}

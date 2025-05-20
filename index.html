@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onboarding and Data Collection Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="section">
+        <h2>Select Services</h2>
+        <label for="services">Which service(s) are you interested in?</label>
+        <select id="services" name="services" multiple size="13">
+            <option value="incorporation_private">Incorporation - Private Limited Company</option>
+            <option value="incorporation_public">Incorporation - Public Limited Company</option>
+            <option value="incorporation_llp">Incorporation - LLP</option>
+            <option value="incorporation_section8">Incorporation - Section 8 Company</option>
+            <option value="proprietorship">Proprietorship Firm</option>
+            <option value="partnership">Partnership Firm</option>
+            <option value="gst_registration">GST Registration</option>
+            <option value="fssai_basic">FSSAI Basic Registration</option>
+            <option value="fssai_state">FSSAI State License</option>
+            <option value="fssai_central">FSSAI Central license</option>
+            <option value="trademark">Trademark Registration</option>
+            <option value="iso">ISO Certifications</option>
+            <option value="other">Other (Please specify below)</option>
+        </select><br>
+        <label for="other_services" class="hidden" id="other_services_label">Please specify other services:</label>
+        <textarea id="other_services" name="other_services" class="hidden"></textarea><br>
+    </div>
+
+    <div id="company_firm_details" class="section">
+        <h2>Company/Firm Details</h2>
+        <label for="entity_name">Name of Company/Firm <span class="required-doc">*</span></label>
+        <input type="text" id="entity_name" name="entity_name" required><br>
+        <label for="pan_entity">PAN of Company/Firm (if applicable)</label>
+        <input type="text" id="pan_entity" name="pan_entity"><br>
+        <label for="registered_address">Registered Address (with Pin Code) <span class="required-doc">*</span></label>
+        <textarea id="registered_address" name="registered_address" required></textarea><br>
+        <label for="state_of_registration">State of Registration <span class="required-doc">*</span></label>
+        <input type="text" id="state_of_registration" name="state_of_registration" required><br>
+        <label for="district_of_registration">District of Registration <span class="required-doc">*</span></label>
+        <input type="text" id="district_of_registration" name="district_of_registration" required><br>
+        <label for="business_nature">Nature of Business / Main Objects (in detail) <span class="required-doc">*</span></label>
+        <textarea id="business_nature" name="business_nature" required></textarea><br>
+        <label for="iec_code">Import Export Code (IEC) - if applicable</label>
+        <input type="text" id="iec_code" name="iec_code"><br>
+    </div>
+
+    <div id="director_partner_details_section" class="section hidden">
+        <h2>Director/Partner/Proprietor Details</h2>
+        <label for="num_directors_partners">Enter the number of Directors (for Companies/LLPs, 2-15), Partners (for LLP/Partnership), or enter 1 for Proprietor: <span class="required-doc">*</span></label>
+        <input type="number" id="num_directors_partners" name="num_directors_partners" min="1" max="15" required>
+        <p>Please enter the correct number as per your business structure.</p>
+        <div id="individual_details_container">
+            </div>
+    </div>
+
+    <div id="shareholder_details_section" class="section hidden">
+        <h2>Shareholder/Subscriber Details</h2>
+        <label for="num_shareholders">Enter the Number of Shareholders/Subscribers: <span class="required-doc">*</span></label>
+        <input type="number" id="num_shareholders" name="num_shareholders" required min="1">
+        <div id="shareholder_details_container">
+            </div>
+    </div>
+
+    <div id="gst_details_section" class="section hidden">
+        <h2>GST Registration Details</h2>
+        <label for="gst_type">Type of GST Registration (Regular, Composition, etc.) <span class="required-doc">*</span></label>
+        <input type="text" id="gst_type" name="gst_type" required><br>
+        <label for="gst_pan">PAN of the Business <span class="required-doc">*</span></label>
+        <input type="text" id="gst_pan" name="gst_pan" required><br>
+        <label for="business_trade_name">Business/Trade Name <span class="required-doc">*</span></label>
+        <input type="text" id="business_trade_name" name="business_trade_name" required><br>
+        <label for="gst_address_proof">Address Proof of Business <span class="required-doc">*</span> (e.g., Electricity Bill, Rent Agreement)</label>
+        <input type="file" id="gst_address_proof" name="gst_address_proof" required><br>
+        <label for="authorised_signatory_pan">PAN of Authorised Signatory <span class="required-doc">*</span></label>
+        <input type="text" id="authorised_signatory_pan" name="authorised_signatory_pan" required><br>
+        <label for="authorised_signatory_photo">Photo of Authorised Signatory <span class="required-doc">*</span></label>
+        <input type="file" id="authorised_signatory_photo" name="authorised_signatory_photo" required><br>
+    </div>
+
+    <div id="fssai_details_section" class="section hidden">
+        <h2>FSSAI Registration/License Details</h2>
+        <label for="fssai_business_type">Type of Food Business <span class="required-doc">*</span></label>
+        <input type="text" id="fssai_business_type" name="fssai_business_type" required><br>
+        <label for="fssai_address">Address of Food Business <span class="required-doc">*</span></label>
+        <textarea id="fssai_address" name="fssai_address" required></textarea><br>
+        <label for="fssai_premises_type">Type of Premises <span class="required-doc">*</span></label>
+        <input type="text" id="fssai_premises_type" name="fssai_premises_type" required><br>
+        <label for="fssai_food_category">Category of Food Products <span class="required-doc">*</span></label>
+        <input type="text" id="fssai_food_category" name="fssai_food_category" required><br>
+        <label for="fssai_photo_id">Photo ID of Applicant/Authorised Person <span class="required-doc">*</span></label>
+        <input type="file" id="fssai_photo_id" name="fssai_photo_id" required><br>
+        <label for="fssai_address_proof">Address Proof of Business <span class="required-doc">*</span></label>
+        <input type="file" id="fssai_address_proof" name="fssai_address_proof" required><br>
+    </div>
+
+    <div id="trademark_details_section" class="section hidden">
+        <h2>Trademark Registration Details</h2>
+        <label for="trademark_name">Trademark Name <span class="required-doc">*</span></label>
+        <input type="text" id="trademark_name" name="trademark_name" required><br>
+        <label for="trademark_description">Description of Trademark/Logo <span class="required-doc">*</span></label>
+        <textarea id="trademark_description" name="trademark_description" required></textarea><br>
+        <label for="trademark_class">Class of Goods/Services <span class="required-doc">*</span></label>
+        <input type="number" id="trademark_class" name="trademark_class" required><br>
+        <label for="trademark_logo_file">Upload Trademark/Logo (if any)</label>
+        <input type="file" id="trademark_logo_file" name="trademark_logo_file"><br>
+        <label for="applicant_id_proof_trademark">ID Proof of Applicant <span class="required-doc">*</span></label>
+        <input type="file" id="applicant_id_proof_trademark" name="applicant_id_proof" required><br>
+        <label for="applicant_address_proof_trademark">Address Proof of Applicant <span class="required-doc">*</span></label>
+        <input type="file" id="applicant_address_proof_trademark" name="applicant_address_proof" required><br>
+        <label for="specimen_signature_trademark">Specimen Signature (if applicable)</label>
+        <input type="file" id="specimen_signature_trademark" name="specimen_signature_trademark"><br>
+    </div>
+
+    <div id="iso_details_section" class="section hidden">
+        <h2>ISO Certifications Details</h2>
+        <label for="iso_standard">ISO Standard Interested In <span class="required-doc">*</span></label>
+        <input type="text" id="iso_standard" name="iso_standard" required><br>
+        <label for="iso_scope">Scope of Certification <span class="required-doc">*</span></label>
+        <textarea id="iso_scope" name="iso_scope" required></textarea><br>
+        </div>
+
+    <div class="section">
+        <h2>General Documents (Potentially Required for Most Services)</h2>
+        <label>Upload Scanned Copies (PDF or JPG)</label><br>
+        <div id="general_documents">
+            <label for="pan_card_entity_doc">PAN Card of Entity (if applicable) <span class="required-doc"></span></label>
+            <input type="file" id="pan_card_entity_doc" name="pan_card_entity_doc"><br>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Additional Information</h2>
+        <label for="additional_comments">Any other relevant information?</label>
+        <textarea id="additional_comments" name="additional_comments"></textarea><br>
+    </div>
+
+    <h2>Download Templates</h2>
+    <ul>
+        <li><a href="templates/NOC_Format.docx" download>Download NOC Template</a></li>
+        <li><a href="templates/Rent_Agreement_Format.docx" download>Download Rent Agreement Template</a></li>
+        <li><a href="templates/DIR-2_Format.pdf" download>Download DIR-2 Template</a></li>
+    </ul>
+
+    <button type="submit">Submit Information</button>
+
+    <p class="important-note">**Important:** Please note that the information and document requirements listed in this form are based on general knowledge and may not be exhaustive or the most current. It is your responsibility to verify these requirements with the relevant government authorities and consult with legal professionals to ensure compliance with all applicable laws in India.</p>
+
+    <script src="script.js"></script>
+</body>
+</html>
